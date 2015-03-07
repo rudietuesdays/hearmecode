@@ -1,0 +1,16 @@
+with open("states.txt", "r") as states_file:
+	states = states_file.read().split("\n")
+
+for index, state in enumerate(states):
+	states[index] = state.split("\t")
+
+state_abbrev=[]
+state_name=[]
+
+for state in states:
+	state_abbrev.append(state[:1])
+print state_abbrev
+
+for state in states:
+	state_name.append(state[1:2])
+print state_name
